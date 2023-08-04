@@ -24,7 +24,17 @@ morse_code_dict = {
     'W': '.--',
     'X': '-..-',
     'Y': '-.--',
-    'Z': '--..'
+    'Z': '--..',
+    1: '.----',
+    2: '..---',
+    3: '...--',
+    4: '....-',
+    5: '.....',
+    6: '-....',
+    7: '--...',
+    8: '---..',
+    9: '----.',
+    0: '-----',
 }
 ask_for_input = True
 print("Type 'exit' to exit the program")
@@ -39,4 +49,4 @@ while ask_for_input:
             if i == " ":
                 print(" ")
             else:
-                print(data[i], end=" ")
+                print(morse_code_dict[i], end=" ")
