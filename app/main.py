@@ -1,4 +1,4 @@
-data = morse_code_dict = {
+morse_code_dict = {
     'A': '.-',
     'B': '-...',
     'C': '-.-.',
