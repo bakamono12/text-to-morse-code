@@ -1,3 +1,8 @@
+import flask
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
 morse_code_dict = {
     'A': '.-',
     'B': '-...',
@@ -36,17 +41,24 @@ morse_code_dict = {
     9: '----.',
     0: '-----',
 }
-ask_for_input = True
-print("Type 'exit' to exit the program")
-while ask_for_input:
-    user_input = input("\nEnter a word or sentence to convert to morse code: ")
-    if user_input == "exit":
-        ask_for_input = False
-    else:
-        user_input = user_input.upper()
-        user_input = list(user_input)
-        for i in user_input:
-            if i == " ":
-                print(" ")
-            else:
-                print(morse_code_dict[i], end=" ")
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/convert")
+def convert_text():
+    user_input = request.args.get("text", "").upper()
+    morse_output = ""
+    for char in user_input:
+        if char == " ":
+            morse_output += " "
+        elif char in morse_code_dict:
+            morse_output += morse_code_dict[char] + " "
+    return morse_output
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

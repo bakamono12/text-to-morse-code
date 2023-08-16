@@ -1,0 +1,58 @@
+/* Dark mode styling */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .form-control {
+    background-color: #292929;
+    color: #ffffff;
+    border-color: #343a40;
+}
+
+.dark-mode .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.dark-mode input[type="text"]:read-only {
+    background-color: #333333;
+}
+
+/* gradient button */
+.gradient-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #0061FFff, #1079FFff, #2090FFff, #30A8FFff, #40C0FFff, #50D7FFff, #60EFFFff);
+    background-size: 400% 100%;
+    color: white;
+    transition: background-position 3s ease-in-out;
+}
+
+.gradient-button:hover {
+    background-position: 100% 0;
+    color: #1A1A1A;
+    animation: gradientAnimation 5s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 200% 0;
+    }
+    75% {
+        background-position: 300% 0;
+    }
+}
