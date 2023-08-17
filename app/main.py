@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from gunicorn.app.wsgiapp import run
 
 app = Flask(__name__)
 
@@ -60,4 +61,5 @@ def convert_text():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Use Gunicorn as the server
+    run()
