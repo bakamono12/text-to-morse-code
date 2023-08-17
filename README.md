@@ -1,2 +1,2 @@
-# text-to-morse-code
-convert the text to morse code in CLI
+# MorseGen: Transform Text to Morse Code
+Are you fascinated by the intricate patterns of Morse code? Discover MorseGen, a powerful text-to-Morse code generator that effortlessly converts your messages into the timeless language of dots and dashes. Whether you're a communication enthusiast, a history buff, or just curious about cryptography, MorseGen is your go-to tool. Input any text, and watch as it elegantly translates into Morse code before your eyes. Unravel the hidden meanings and delve into a world of communication history with MorseGen
